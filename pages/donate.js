@@ -34,7 +34,7 @@ function Donate() {
 
             <section className=' grid__items ' >
                 <div className="medium__text" >
-                    <p>I'm running for SRC President</p>
+                    <p>I am running for SRC President</p>
                 </div>
                 <div>
                     <p className="normal__text text-justify" >

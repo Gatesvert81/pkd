@@ -9,9 +9,9 @@ function Donate() {
     const [page, setPage] = useContext(NavContext)
 
     useEffect(() => {
-      if (page === "about") return;
+      if (page === "donate") return;
     
-      setPage("about")
+      setPage("donate")
     }, [])
 
     return (

@@ -13,7 +13,7 @@ function Footer() {
     const [page, setPage] = useContext(NavContext)
 
     return (
-        <footer className='w-full h-fit bg-main-blue p-10 md:px-16 lg:px-24 grid__items grid-cols-3 text-white ' >
+        <footer className='w-full h-fit bg-main-blue p-10 md:px-16 lg:px-24 grid__items md:grid-cols-3 text-white ' >
             <div className='w-full flex flex-col justify-start items-center' >
                 <div>
                     PKD

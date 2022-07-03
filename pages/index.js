@@ -74,7 +74,7 @@ export default function Home() {
         <div className='w-full text-center medium__text' >
           <p>Vision</p>
         </div>
-        <div className='grid__items grid-cols-3' >
+        <div className='grid__items md:grid-cols-3' >
           <VisionCard />
           <VisionCard />
           <VisionCard />

@@ -3,11 +3,12 @@ import Button from './Button'
 import { motion, AnimatePresence, useAnimation } from "framer-motion"
 import { NavContext, ScrollContext } from './Context'
 import AnchorLink from './AnchorLink'
+import Image from 'next/image'
 
 function Navigation() {
 
     const [show, handleShow] = useState(false)
-    
+
     const [showNav, setShowNav] = useContext(ScrollContext)
     const [page, setPage] = useContext(NavContext)
 
@@ -82,11 +83,17 @@ function Navigation() {
         <>
             <motion.nav className={`w-full h-fit fixed top-0 left-0 px-10 md:px-16 lg:px-24 py-3 flex flex-row justify-between items-center z-10 transition ease-in-out ${show ? " bg-faded-blue backdrop-blur shadow-md shadow-faded-blue" : "bg-transparent"} ${!show === showNav ? "bg-faded-blue backdrop-blur shadow-md shadow-faded-blue" : null} `}
             >
-                <div>
-                    PKD
-                </div>
+                <AnchorLink route="/">
+                    <motion.div
+                        className='w-20 h-10 relative  '
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }} >
+
+                        <Image src="/PKD logo.png" layout="fill" className="object-cover object-left" alt="News Image" />
+                    </motion.div>
+                </AnchorLink>
                 <div className='hidden md:flex md:flex-row md:justify-center md:items-center md:gap-5 ' >
-                <AnchorLink route="/" >
+                    <AnchorLink route="/" >
                         <Button
                             style={`footer__btn ${page === "home" ? "selected" : null} `}
                             click={() => {

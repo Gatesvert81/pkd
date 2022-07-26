@@ -1,60 +1,86 @@
 import React, { useContext, useEffect } from 'react'
 import Head from 'next/head'
+import { motion } from 'framer-motion'
 import NewsCard from '../src/Components/NewsCard'
 import EventsCard from '../src/Components/EventsCard'
-import { NavContext } from '../src/Components/Context'
+import { AnimationContext, NavContext } from '../src/Components/Context'
+import Page from '../src/AnimatedComponents/Page'
 
 
 function News() {
 
     const [page, setPage] = useContext(NavContext)
 
+    const { textAnimate, transition } = useContext(AnimationContext)
+
     useEffect(() => {
-      if (page === "news") return;
-    
-      setPage("news")
+        if (page === "news") return;
+
+        setPage("news")
     }, [])
 
     return (
-        <div className="w-full min-h-screen">
+        <Page>
             <Head>
                 <title>Paul Kwame Dzeha | About</title>
                 <meta name="description" content="About Sir Paul" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className='min-h-60vh bg-ug-clock main__bg bg-left p-0'>
-                <div className='w-full h-full bg-faded-blue p-10 md:py-16 flex flex-col justify-center items-start gap-5 ' >
-                    <div className='w-full md:w-1/2 large__text uppercase font-bold text-white' >
-                        <p>News and events about</p>
-                        <p>Campaign Progress</p>
-                    </div>
-                </div>
-            </main>
+            <motion.main
+                className='min-h-60vh bg-ug-clock main__bg bg-left p-0 '
+                transition={transition}>
+                <motion.div className='w-full h-full bg-faded-blue p-10 pt-16 md:py-16 flex flex-col justify-center items-start gap-5 ' >
+                    <motion.div
+                        className='w-full md:w-1/2 large__text uppercase font-bold text-white'
+                        transition={transition}>
+                        <motion.p {...textAnimate}>
+                            News and events about
+                        </motion.p>
+                        <motion.p {...textAnimate}>
+                            Campaign Progress
+                        </motion.p>
+                    </motion.div>
+                </motion.div>
+            </motion.main>
 
-            <section className='grid__items' >
-                <div className="medium__text" >
-                    <p>News</p>
-                </div>
-                <div className='grid__items md:grid-cols-3'>
+            <motion.section
+                className='grid__items'
+                transition={transition}
+            >
+                <motion.div
+                    className="medium__text" >
+                    <motion.p {...textAnimate} >
+                        News
+                    </motion.p>
+                </motion.div>
+                <motion.div
+                    className='grid__items md:grid-cols-3'
+                    transition={transition}>
                     <NewsCard />
                     <NewsCard />
                     <NewsCard />
-                </div>
-            </section>
+                </motion.div>
+            </motion.section>
 
-            <section className='grid__items' >
-                <div className="medium__text" >
-                    <p>News</p>
-                </div>
-                <div className='grid__items md:grid-cols-3'>
+            <motion.section
+                className='grid__items'
+                transition={transition}>
+                <motion.div className="medium__text" >
+                    <motion.p {...textAnimate}>
+                        Events
+                    </motion.p>
+                </motion.div>
+                <motion.div
+                    className='grid__items md:grid-cols-3'
+                    transition={transition}>
                     <EventsCard />
                     <EventsCard />
                     <EventsCard />
-                </div>
-            </section>
+                </motion.div>
+            </motion.section>
 
-        </div>
+        </Page>
     )
 }
 

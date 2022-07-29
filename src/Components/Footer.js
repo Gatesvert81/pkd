@@ -102,7 +102,9 @@ function Footer() {
                         Email:
                     </motion.p>
                     <motion.p >
-                        pkd@gmail.com
+                        <AnchorLink route="mailto:pdzeha@gmail.com">
+                            pdzeha@gmail.com
+                        </AnchorLink>
                     </motion.p>
                 </motion.div>
                 <motion.div
@@ -112,7 +114,9 @@ function Footer() {
                         Tel:
                     </motion.p>
                     <motion.p>
-                        +233 241 2543 265
+                        <AnchorLink route="tel:+233241045975">
+                            +233 241 045 975
+                        </AnchorLink>
                     </motion.p>
                 </motion.div>
                 <motion.div

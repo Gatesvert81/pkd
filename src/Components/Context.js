@@ -1,5 +1,4 @@
 import React, { createContext, useEffect, useState } from 'react'
-
 export const NavContext = createContext()
 export const ScrollContext = createContext()
 export const AnimationContext = createContext()
@@ -35,7 +34,7 @@ function Context({ children }) {
     }
 
     const transition = {
-        delayChildren: 0.2
+        delayChildren: 0.3
     }
 
 
@@ -56,3 +55,6 @@ function Context({ children }) {
 }
 
 export default Context
+
+
+

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { AnimationContext } from './Context'
 
 function VisionCard() {
@@ -19,15 +19,15 @@ function VisionCard() {
         >
             <motion.div className='w-full text-center' >
                 <motion.p {...textAnimate}>
-                    i
+                    
                 </motion.p>
                 <motion.p {...textAnimate} className='card__title' >
-                    Title
+                    Reformers for Change
                 </motion.p>
             </motion.div>
             <motion.div className='w-full text-center normal__text'>
                 <motion.p {...textAnimate}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Update Coming Soon !!!
                 </motion.p>
             </motion.div>
         </motion.div >

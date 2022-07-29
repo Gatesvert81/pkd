@@ -28,9 +28,9 @@ function News() {
             </Head>
 
             <motion.main
-                className='min-h-60vh bg-ug-clock main__bg bg-left p-0 '
+                className='h-50vh bg-ug-clock main__bg bg-left p-0 '
                 transition={transition}>
-                <motion.div className='w-full h-full bg-faded-blue p-10 pt-16 md:py-16 flex flex-col justify-center items-start gap-5 ' >
+                <motion.div className='w-full h-full bg-faded-blue p-10 pt-16 md:px-16 flex flex-col justify-center items-start gap-5 ' >
                     <motion.div
                         className='w-full md:w-1/2 large__text uppercase font-bold text-white'
                         transition={transition}>

@@ -84,7 +84,7 @@ function Donate() {
                             Choose an amount
                         </motion.p>
                         <motion.p {...textAnimate}>
-                            Partner with PKD's vision
+                            Partner with PKD&#39;s vision
                         </motion.p>
                     </motion.div>
                     <motion.div
